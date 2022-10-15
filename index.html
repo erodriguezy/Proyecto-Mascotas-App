@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/dropzone/dist/dropzone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Mascotas App</title>
+    
+</head>
+<body>
+    <div class="encabezado">
+        <h1>Mascotas App</h1> 
+        <span id="error"></span>
+    </div>
+    
+    <section class="main-container">
+        <div class="cards-container">
+            <div class="dog-card">
+                <img id="imagen1" alt="Perro aleatorio3">
+                <div class="dog-info">
+                    <div>
+                        <button id="button1" class="btn1">Guardar en favoritos</button>
+                    </div>
+                    
+                </div>  
+            </div>    
+            <div class="dog-card">
+                <img  id="imagen2" alt="perro aleatorio2">
+                <div class="dog-info">
+                    <div>
+                        <button id="button2"class="btn1">Guardar en favoritos</button>                        
+                    </div>
+                    
+                </div>  
+            </div>   
+            <div class="dog-card">
+                <img id="imagen3" alt="Perro aleatorio3">
+                <div class="dog-info">
+                    <div>
+                        <button id="button3" class="btn1">Guardar en favoritos</button>
+                    </div>
+                    
+                </div>  
+            </div>   
+        </div>
+    </section>
+
+    
+   
+
+    <div class="container-recargar">
+        <button class="btn-recargar" onclick="loadRandomDogs()">Cargar otras fotos</button>
+    </div>   
+
+    <div >
+        <h2>Subir Foto</h2>         
+    </div> 
+    <section class="seccion-subida">
+        <div class="form-container">           
+            <form action="#" id="drop-area">                
+                <input id="archivo" type="file" name="file" hidden multiple/>
+                <i id="icono-subir" class="fas fa-cloud-upload-alt"></i>
+                <p>Seleccionar</p>
+            </form>
+            <div id="preview"></div>
+          
+        </div>
+        
+
+    </section>
+    <div >
+        <h2>Favoritos</h2>         
+    </div>
+
+
+    <section id="favourites-dogs">
+        <div id="cards-container2" >
+            
+        </div>
+    </section>
+    
+
+    <script src="node_modules/dropzone/dist/dropzone-min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

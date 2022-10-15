@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "dropzone": "^6.0.0-beta.2"
+  },
+  "name": "consumo-api",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Rodriguez Yapur <duduyapur@gmail.com>",
+  "license": "MIT",
+  "description": ""
+}
