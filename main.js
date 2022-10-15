@@ -135,16 +135,14 @@ async function deleteFavouriteDog(id){
 
 form.addEventListener('click',e => {
     
-    archivoInput.click();   
-    console.log('Entro a onclick');
+    archivoInput.click();       
 });
     
 archivoInput.addEventListener("change",e =>{
     files=archivoInput.files;
     form.classList.add("active");
     showFiles(files);
-    form.classList.remove("active"); 
-    console.log('Entro a onchange');
+    form.classList.remove("active");     
 });
 
 form.addEventListener("dragover",(e)=>{
@@ -157,7 +155,7 @@ form.addEventListener("dragover",(e)=>{
 
 form.addEventListener("dragleave",(e)=>{
     e.preventDefault(); 
-    textoDropArea.innerHTML='Seleccionar';
+    textoDropArea.innerHTML='Click para seleccionar o arrastra la foto aquí';
     form.classList.remove("active");
     
         
@@ -168,7 +166,7 @@ dropArea.addEventListener("drop",(e)=>{
     files=e.dataTransfer.files;
     showFiles(files);     
     form.classList.remove("active");
-    textoDropArea.innerHTML='Seleccionar';
+    textoDropArea.innerHTML='Click para seleccionar o arrastra la foto aquí';
         
 });
 
@@ -201,6 +199,9 @@ function processFile(file){
                             Loading...
                         </span>
                     </div>
+                    <div>
+                        <img class="icono-cerrar" src="./src/icono_cerrar.png" alt="icono cerrar" width="30px" onclick="borrarSubido('${id}')">
+                    </div>
                 </div>
             `;
             const html=document.querySelector("#preview").innerHTML;
@@ -213,6 +214,7 @@ function processFile(file){
         alert("no es un archivo valido");
     }
 }
+
 
 async function uploadDogPhoto(file,id){    
 
@@ -237,6 +239,14 @@ async function uploadDogPhoto(file,id){
         document.querySelector(`#${id} .status-text`).innerHTML = `<span class="failure">El archivo no pudo subirse...</span>`;
     }    
 }
+
+function borrarSubido(id){
+    const etiqueta=document.getElementById(id);
+    etiqueta.remove();
+
+}
+
+
 //subir archivo fin
 
 function cambiar(){

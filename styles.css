@@ -210,8 +210,6 @@ form p{
 
 }
 
-/*.fa-check-circle{
-    width: 30px;
-    height: 30px;
-    display: none;
-}*/
+.icono-cerrar{
+    cursor: pointer;
+}
